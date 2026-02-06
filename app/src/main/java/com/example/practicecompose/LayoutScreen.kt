@@ -1,4 +1,5 @@
-package com.example.practicecompose.ui.theme
+package com.example.practicecompose
+
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -39,7 +40,7 @@ fun layoutscreen(){
         Box(modifier = Modifier.background(color = Color.Black).height(200.dp)
             .width(200.dp).align(Alignment.Center)){}
 
-        }
-
-
     }
+
+
+}
