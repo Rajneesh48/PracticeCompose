@@ -244,7 +244,7 @@ Box(modifier = Modifier.size(40.dp), contentAlignment = Alignment.Center){
                         Text(text = "Boost in Search")
                     }
                     OutlinedButton(onClick = {}, shape = (RoundedCornerShape(10.dp))){
-                        Text(text = "Boost in Search")
+                        Text(text = "Vacancies")
                     }}
                 }}
 
