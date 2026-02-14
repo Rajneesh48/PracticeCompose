@@ -12,9 +12,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Sms
 import androidx.compose.material.icons.filled.Tsunami
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Sms
 import androidx.compose.material.icons.outlined.Tsunami
 import androidx.compose.material3.BottomAppBar
@@ -47,8 +49,8 @@ fun ScrollBarView(){
     var CurrentRoute = Navcontroller.currentBackStackEntryAsState().value?.destination?.route
     selectedIndex = when(CurrentRoute){
         "home"->0
-        "message"->1
-        "sos"->2
+        "settings"->1
+        "profile"->2
         else -> 0
     }
     Scaffold(topBar = {
@@ -85,16 +87,16 @@ fun ScrollBarView(){
                         })
 
                     Icon(if (selectedIndex ==1){
-                        Icons.Default.Sms}
+                        Icons.Default.Settings}
                     else
-                        Icons.Outlined.Sms,
+                        Icons.Outlined.Settings,
                         contentDescription = "",
                         tint = Color.White,
                         modifier = Modifier.clickable(
                             indication = null,
                             interactionSource = remember { MutableInteractionSource() },
                         ){
-                            Navcontroller.navigate("message"){
+                            Navcontroller.navigate("settings"){
                                 popUpTo(Navcontroller.graph.startDestinationId){
                                     saveState =true
                                 }
@@ -105,16 +107,16 @@ fun ScrollBarView(){
                     )
 
                     Icon(if (selectedIndex ==2){
-                        Icons.Default.Tsunami}
+                        Icons.Default.Sms}
                     else
-                        Icons.Outlined.Tsunami,
+                        Icons.Outlined.Sms,
                         contentDescription = "",
                         tint = Color.White,
                         modifier = Modifier.clickable(
                             indication = null,
                             interactionSource = remember { MutableInteractionSource() },
                         ){
-                            Navcontroller.navigate("sos"){
+                            Navcontroller.navigate("profile"){
                                 popUpTo(Navcontroller.graph.startDestinationId){
                                     saveState = true
                                 }
