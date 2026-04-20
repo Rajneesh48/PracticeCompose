@@ -52,6 +52,7 @@ fun ProfileScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
+
             .systemBarsPadding()
             .padding(top = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -76,6 +77,7 @@ fun ProfileScreen() {
                 contentDescription = "Edit",
                 modifier = Modifier
                     .padding(end = 20.dp)
+
                     .size(24.dp)
                     .align(Alignment.TopEnd),
                 tint = Color.Blue
@@ -263,6 +265,7 @@ Box(modifier = Modifier.size(40.dp), contentAlignment = Alignment.Center){
             ){}
 
         }
+        Spacer(modifier = Modifier.height(4.dp))
         Card(
             modifier = Modifier
                 .fillMaxWidth()
